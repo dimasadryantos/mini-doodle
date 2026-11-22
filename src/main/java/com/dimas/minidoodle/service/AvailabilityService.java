@@ -43,11 +43,6 @@ public class AvailabilityService {
         return new AvailabilityResponse(userId, from, to, intervals, free, busy);
     }
 
-    /**
-     * Merges slots (sorted by start, non-overlapping by DB constraint) into
-     * maximal runs of adjacent slots with the same status, clipped to [from, to).
-     * Pure function, O(n) over the slots in the frame.
-     */
     static List<Interval> merge(List<TimeSlot> sorted, Instant from, Instant to) {
         List<Interval> out = new ArrayList<>();
         Instant curStart = null, curEnd = null;

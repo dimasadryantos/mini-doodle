@@ -5,10 +5,6 @@ import jakarta.persistence.*;
 import java.time.Instant;
 import java.util.UUID;
 
-/**
- * A user's personal calendar. This is a purely internal domain concept: the
- * API talks about users and their slots, never about calendars.
- */
 @Entity
 @Table(name = "calendars")
 public class Calendar {

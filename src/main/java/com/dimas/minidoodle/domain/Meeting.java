@@ -7,7 +7,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.UUID;
 
-/** A booked time slot. Creating a meeting marks its slot as busy. */
 @Entity
 @Table(name = "meetings")
 public class Meeting {
